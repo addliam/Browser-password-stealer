@@ -60,7 +60,7 @@ def save_results(browser_name, data_type, content):
     if not os.path.exists(browser_name):
         os.mkdir(browser_name)
     if content is not None:
-        open(f'{browser_name}/{data_type}.txt', 'w').write(content)
+        open(f'{browser_name}/{data_type}.txt', 'w', encoding='utf-8').write(content)
         print(f"\t [*] Saved in {browser}/{data_type}.txt")
     else:
         print(f"\t [-] No Data Found!")
